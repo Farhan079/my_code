@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Time in JavaScript</title>
+</head>
+<body>
+<h1>Current Time</h1>
+<script>
+var now = new Date();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+var amOrPm = "AM";
+
+if (hours > 12) {
+  hours -= 12;
+  amOrPm = "PM";
+}
+
+document.write("Time: " + hours + ":" + minutes + ":" + seconds + " " + amOrPm);
+</script>
+</body>
+</html>

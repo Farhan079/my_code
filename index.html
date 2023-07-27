@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Pakistan standard time:
+            <div>hours: <span id="hours"> </span></div>
+            <div>minutes: <span id="minutes"></span></div>
+            <div>seconds: <span id="seconds"></span></div>
+            <span id="time"></span>
+            </h1>
+        </div>
+    </div>
+    <!-- script -->
+    <script>
+        function set_time(){
+            let cur_time = new Date()
+            
+
+            let hours = document.querySelector("#hours")
+            let minutes = document.querySelector("#minutes")
+            let seconds = document.querySelector("#seconds")
+
+            hours.innerHTML = cur_time.getHours()
+            minutes.innerHTML = cur_time.getMinutes()
+            seconds.innerHTML = cur_time.getSeconds()
+
+            
+
+        }
+        setInterval(set_time)
+
+    </script>
+</body>
+</html>

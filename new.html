@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>pakistan standard time:</h1>
+    <h3>
+      <span id="hrs"> : </span> <span id="mins"> : </span>
+      <span id="secs"></span> <span id="periode"></span>
+    </h3>
+    <script>
+      function time_now() {
+        let cur_time = new Date();
+        // let time = document.querySelector("#t")
+        let hours = document.querySelector("#hrs");
+        
+        let period_now = "";
+        if (hours > 12) {
+          period_now = "AM";
+        }
+        else{
+            period_now = "PM"
+        }
+        let minutes = document.querySelector("#mins");
+        let seconds = document.querySelector("#secs");
+        let period = document.querySelector("#period");
+
+        hours.innerHTML = cur_time.getHours() % 12;
+        minutes.innerHTML = cur_time.getMinutes();
+        seconds.innerHTML = cur_time.getSeconds();
+        period.innerHTML = period_now
+      }
+      setInterval(time_now, 1000);
+    </script>
+  </body>
+</html>
